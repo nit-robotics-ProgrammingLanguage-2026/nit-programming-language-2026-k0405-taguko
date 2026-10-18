@@ -1,4 +1,7 @@
 #include <stdio.h>
+#define PI 3.141592
+
+double calc(double x);
 
 int main(void) {
     /* 課題0405: 車輪型ロボットを考える．車輪の半径をr/2[m]とする．このロボットを距離x[m]だけ走らせたい時，
@@ -9,8 +12,12 @@ int main(void) {
      これらの値すべてをdouble型として計算した計算結果のa(桁数指定なし)を表示するようなプログラムとせよ．
      */
     
-
-
-     
+    double input;
+    scanf("%lf", &input);
+    printf("%lf", calc(input));
     return 0;
+}
+
+double calc(double x) {
+    return x * 90 / PI;
 }
